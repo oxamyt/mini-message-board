@@ -6,12 +6,13 @@
   </head>
   <body>
     <h1><%= title %></h1>
+    <a href="/new" >Click here to write message</a>
    <ul>
     <% messages.forEach((message) => { %>
       <li>
         <h2><%= message.text %> </h2>
         <h1><%= message.user %> </h1>
-        <h2><%= message.added %> </h2>
+        <h2><%= message.added.toLocaleString() %> </h2>
       </li>
     <% }) %>
    </ul>

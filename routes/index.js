@@ -16,19 +16,22 @@ const messages = [
 
 // GET home page
 router.get("/", function (req, res, next) {
-  res.render("index", { title: "Mini Messageboard", messages: messages });
+  res.render("index", { title: "Mini Message board", messages: messages });
 });
 
 // GET new form page
 router.get("/new", function (req, res, next) {
-  res.render("form", { title: "Mini Messageboard", messages: messages });
+  res.render("form", { title: "Write your message" });
 });
 
 // POST new form page
 router.post("/new", function (req, res, next) {
+  const messageText = req.body.messageText;
+  const authorText = req.body.authorText;
+
   messages.push({
-    text: req.body.messageText,
-    user: req.body.authorText,
+    text: messageText,
+    user: authorText,
     added: new Date(),
   });
   res.redirect("/");
