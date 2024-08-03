@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Message Details</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="container-form">
+      <div class="window-form">
+        <h1>Message Details</h1>
+        <p><strong>User:</strong> <%= message.user %></p>
+        <p><strong>Text:</strong> <%= message.text %></p>
+        <p><strong>Added:</strong> <%= message.added.toLocaleString() %></p>
+        <a class="back" href="/">Back to messages</a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -5,16 +5,20 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <a href="/new" >Click here to write message</a>
+    <div class="container">
+    <%- include('header') %>
+    <div class="window">
    <ul>
     <% messages.forEach((message) => { %>
-      <li>
-        <h2><%= message.text %> </h2>
+      <li class="message">
         <h1><%= message.user %> </h1>
-        <h2><%= message.added.toLocaleString() %> </h2>
+        <h3><%= message.text %> </h3>
+        <h3><%= message.added.toLocaleString() %> </h3>
+        <a class="details" href="/messages/<%= message.id %>" >Open details</a>
       </li>
     <% }) %>
    </ul>
+   </div>
+   </div>
   </body>
 </html>
