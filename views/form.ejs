@@ -10,8 +10,18 @@
         <form class="message-form" method="POST" action="/new">
           <h1>Type your message!</h1>
 
-          <input type="text" name="authorText" placeholder="Your name" />
-          <input type="text" name="messageText" placeholder="Your message" />
+          <input
+            type="text"
+            required
+            name="authorText"
+            placeholder="Your name"
+          />
+          <input
+            type="text"
+            required
+            name="messageText"
+            placeholder="Your message"
+          />
           <button class="btn" type="submit">Add message</button>
         </form>
       </div>
