@@ -10,16 +10,11 @@
         <form class="message-form" method="POST" action="/new">
           <h1>Type your message!</h1>
 
+          <input type="text" required name="username" placeholder="Your name" />
           <input
             type="text"
             required
-            name="authorText"
-            placeholder="Your name"
-          />
-          <input
-            type="text"
-            required
-            name="messageText"
+            name="messagedata"
             placeholder="Your message"
           />
           <button class="btn" type="submit">Add message</button>
